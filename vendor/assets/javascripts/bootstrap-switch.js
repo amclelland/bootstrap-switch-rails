@@ -91,7 +91,7 @@
       inverse ? "inverse" : undefined,
       id ? "id-" + id : undefined,
     ].filter(function (v) {
-      return v == null;
+      return v != null;
     });
   }
 
@@ -149,7 +149,7 @@
     var state =
       arguments.length > 0 && arguments[0] !== undefined
         ? arguments[0]
-        : this.ope;
+        : this.state();
 
     this.$container.css("margin-left", function () {
       var values = [0, "-" + _this2.privateHandleWidth + "px"];
